@@ -31,11 +31,11 @@ jobs:
 
       - name: Run database setup script (schema.sql)
         run: |
-          docker exec isctespot-isctespot_v2-server python /app/db/setup/create_db.py  # Replace with actual container name from 'docker ps'
+          docker exec isctespot-isctespot_v2-server-1 python /app/db/setup/create_db.py  # Replace with actual container name from 'docker ps'
 
       - name: Run data population script (data_population.py)
         run: |
-          docker exec isctespot-server-1 python /app/db/setup/data_population.py  # Replace with actual container name
+          docker exec isctespot-isctespot_v2-server-1 python /app/db/setup/data_population.py  # Replace with actual container name
 
       - name: Run health check on frontend
         run: |
