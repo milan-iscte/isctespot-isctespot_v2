@@ -48,7 +48,7 @@ jobs:
       - name: security-scan
         uses: aquasecurity/trivy-action@0.28.0
         with:
-          image-ref: isctespot-isctespot_v2-server-1
+          image-ref: isctespot-isctespot_v2-server
           exist-code: 1
           ingnore-unfixed: true
           severity: CRITICAL, HIGH
