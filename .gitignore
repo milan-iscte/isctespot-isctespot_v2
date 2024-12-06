@@ -1,0 +1,24 @@
+# Ignore everything
+*
+
+# But not these directories
+!.github/
+!frontend/
+!server/
+
+# And not this file
+!docker-compose.yml
+!setup.ps1
+!setup.sh
+
+# Ignore any files within the tracked directories
+!.github/**
+!frontend/**
+!server/**
+
+# Ignore any other files that might exist in the root directory
+!.gitignore
+
+# Ignore venv
+venv
+.venv
