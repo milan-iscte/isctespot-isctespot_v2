@@ -51,4 +51,4 @@ jobs:
           image-ref: isctespot-isctespot_v2-server
           exist-code: 1
           ingnore-unfixed: true
-          severity: CRITICAL, HIGH
+          severity: CRITICAL,HIGH
