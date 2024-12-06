@@ -43,7 +43,7 @@ jobs:
 
       - name: Run health check on backend
         run: |
-          docker exec isctespot-server-1 python /app/tests/health_checks/test_flow_1.py  # Replace with actual container name
+          docker exec isctespot-isctespot_v2-server-1 python /app/tests/health_checks/test_flow_1.py  # Replace with actual container name
       
       - name: security-scan
         uses: aquasecurity/trivy-action@0.28.0
