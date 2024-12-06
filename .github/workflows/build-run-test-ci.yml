@@ -31,7 +31,7 @@ jobs:
 
       - name: Run database setup script (schema.sql)
         run: |
-          docker exec isctespot-server-1 python /app/db/setup/create_db.py  # Replace with actual container name from 'docker ps'
+          docker exec isctespot-isctespot_v2-server python /app/db/setup/create_db.py  # Replace with actual container name from 'docker ps'
 
       - name: Run data population script (data_population.py)
         run: |
@@ -46,7 +46,7 @@ jobs:
           docker exec isctespot-server-1 python /app/tests/health_checks/test_flow_1.py  # Replace with actual container name
       
       - name: security-scan
-        uses: aquaqsecurity/trivy-action@0.28.0   
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: isctespot-isctespot_v2-server-1
           exist-code: 1
